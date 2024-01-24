@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="main_dbDataSet" targetNamespace="http://tempuri.org/main_dbDataSet.xsd" xmlns:mstns="http://tempuri.org/main_dbDataSet.xsd" xmlns="http://tempuri.org/main_dbDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="main_dbConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="main_dbConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PersonnelApp.Properties.Settings.GlobalReference.Default.main_dbConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="sheduleViewTableAdapter" GeneratorDataComponentClassName="sheduleViewTableAdapter" Name="sheduleView" UserDataComponentName="sheduleViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="main_dbConnectionString (Settings)" DbObjectName="dbo.sheduleView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT familyName, firstName, date FROM dbo.sheduleView</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="familyName" DataSetColumn="familyName" />
+              <Mapping SourceColumn="firstName" DataSetColumn="firstName" />
+              <Mapping SourceColumn="date" DataSetColumn="date" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="main_dbDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="main_dbDataSet" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="main_dbDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="sheduleView" msprop:Generator_RowClassName="sheduleViewRow" msprop:Generator_RowEvHandlerName="sheduleViewRowChangeEventHandler" msprop:Generator_RowDeletedName="sheduleViewRowDeleted" msprop:Generator_RowDeletingName="sheduleViewRowDeleting" msprop:Generator_RowEvArgName="sheduleViewRowChangeEvent" msprop:Generator_TablePropName="sheduleView" msprop:Generator_RowChangedName="sheduleViewRowChanged" msprop:Generator_UserTableName="sheduleView" msprop:Generator_RowChangingName="sheduleViewRowChanging" msprop:Generator_TableClassName="sheduleViewDataTable" msprop:Generator_TableVarName="tablesheduleView">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="familyName" msprop:Generator_UserColumnName="familyName" msprop:Generator_ColumnPropNameInTable="familyNameColumn" msprop:Generator_ColumnPropNameInRow="familyName" msprop:Generator_ColumnVarNameInTable="columnfamilyName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="firstName" msprop:Generator_UserColumnName="firstName" msprop:Generator_ColumnPropNameInTable="firstNameColumn" msprop:Generator_ColumnPropNameInRow="firstName" msprop:Generator_ColumnVarNameInTable="columnfirstName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="date" msprop:Generator_UserColumnName="date" msprop:Generator_ColumnPropNameInTable="dateColumn" msprop:Generator_ColumnPropNameInRow="date" msprop:Generator_ColumnVarNameInTable="columndate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
