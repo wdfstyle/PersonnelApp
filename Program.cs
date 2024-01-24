@@ -16,9 +16,9 @@ namespace PersonnelApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormAuth());
+            //Application.Run(new FormAuth());
             //Application.Run(new FormShedule());
-            //Application.Run(new FormTest());
+            Application.Run(new FormDocs());
 
 
         }
