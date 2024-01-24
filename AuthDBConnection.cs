@@ -8,6 +8,6 @@ namespace PersonnelApp
 {
     public static class AuthDBConnection
     {
-        public static string Path = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\PersonnelApp\user_db.mdf;Integrated Security = True";
+        public static string Path = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Diplom\PersonnelApp\user_db.mdf;Integrated Security = True";
     }
 }
