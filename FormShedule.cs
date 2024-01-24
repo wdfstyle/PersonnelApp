@@ -117,7 +117,6 @@ namespace PersonnelApp
                         SqlDataReader tabel_reader = null;
 
                         SqlCommand tabel_command = new SqlCommand("SELECT workday, status FROM shedule WHERE emploeeId=@emploeeId AND workday BETWEEN @start AND @end", tabel_connection);
-                        //SqlCommand tabel_command = new SqlCommand("SELECT workday, status FROM shedule WHERE emploeeId=@emploeeId", tabel_connection);
 
                         tabel_command.Parameters.AddWithValue("@emploeeId", empl.GetId());
                         tabel_command.Parameters.AddWithValue("@start", start);
@@ -138,12 +137,6 @@ namespace PersonnelApp
                         }
                         finally
                         {
-                            /*string content = "TABEL FILLED:\n";
-                            foreach (var item in tabel)
-                            {
-                                content += $"workday = {item.Key.ToString("dd-MM-yyyy")}, status = {item.Value}\n";
-                            }
-                            MessageBox.Show(content);*/
                             if (tabel_reader != null)
                             {
                                 tabel_reader.Close();

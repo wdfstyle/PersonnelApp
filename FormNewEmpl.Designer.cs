@@ -348,13 +348,13 @@
             this.FemaleRadioButton.Name = "FemaleRadioButton";
             this.FemaleRadioButton.Size = new System.Drawing.Size(51, 17);
             this.FemaleRadioButton.TabIndex = 9;
-            this.FemaleRadioButton.TabStop = true;
             this.FemaleRadioButton.Text = "Жен.";
             this.FemaleRadioButton.UseVisualStyleBackColor = true;
             // 
             // MaleRadioButton
             // 
             this.MaleRadioButton.AutoSize = true;
+            this.MaleRadioButton.Checked = true;
             this.MaleRadioButton.Location = new System.Drawing.Point(89, 98);
             this.MaleRadioButton.Name = "MaleRadioButton";
             this.MaleRadioButton.Size = new System.Drawing.Size(50, 17);

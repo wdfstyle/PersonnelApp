@@ -48,12 +48,14 @@
             // 
             // EmplListBox
             // 
+            this.EmplListBox.CheckOnClick = true;
             this.EmplListBox.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.EmplListBox.FormattingEnabled = true;
             this.EmplListBox.Location = new System.Drawing.Point(12, 36);
             this.EmplListBox.Name = "EmplListBox";
             this.EmplListBox.Size = new System.Drawing.Size(403, 544);
             this.EmplListBox.TabIndex = 2;
+            this.EmplListBox.DoubleClick += new System.EventHandler(this.EmplListBox_DoubleClick);
             // 
             // buttonAdd
             // 
