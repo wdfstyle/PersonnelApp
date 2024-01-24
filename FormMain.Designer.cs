@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.label1 = new System.Windows.Forms.Label();
             this.EmplButton = new System.Windows.Forms.Button();
             this.DepartmentsButton = new System.Windows.Forms.Button();
@@ -97,6 +98,7 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "Приказы";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button4
             // 
@@ -119,7 +121,7 @@
             this.addUserButton.Name = "addUserButton";
             this.addUserButton.Size = new System.Drawing.Size(539, 90);
             this.addUserButton.TabIndex = 7;
-            this.addUserButton.Text = "Добавить пользователя";
+            this.addUserButton.Text = "Управление пользователями";
             this.addUserButton.UseVisualStyleBackColor = false;
             this.addUserButton.Visible = false;
             this.addUserButton.Click += new System.EventHandler(this.addUserButton_Click);
@@ -136,6 +138,7 @@
             this.Controls.Add(this.DepartmentsButton);
             this.Controls.Add(this.EmplButton);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Главное меню";

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PersonnelApp
 {
-    public partial class Form5 : Form
+    public partial class FormDocs : Form
     {
-        public Form5()
+        public FormDocs()
         {
             InitializeComponent();
         }
@@ -25,6 +25,11 @@ namespace PersonnelApp
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

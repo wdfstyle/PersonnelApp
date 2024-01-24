@@ -53,5 +53,11 @@ namespace PersonnelApp
             Form sheduleForm = new FormShedule();
             sheduleForm.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form docsForm = new FormDocs();
+            docsForm.Show();
+        }
     }
 }

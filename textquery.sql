@@ -1,0 +1,1 @@
+﻿SELECT workday, status FROM shedule WHERE emploeeId=1 AND workday BETWEEN '2023-09-01' AND '2023-10-01'

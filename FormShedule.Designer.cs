@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.main_dbDataSet = new PersonnelApp.main_dbDataSet();
             this.sheduleViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sheduleViewTableAdapter = new PersonnelApp.main_dbDataSetTableAdapters.sheduleViewTableAdapter();
@@ -62,11 +63,23 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Location = new System.Drawing.Point(12, 62);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1076, 488);
+            this.dataGridView1.Size = new System.Drawing.Size(1155, 347);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             // 
             // startPicker
             // 
@@ -114,7 +127,7 @@
             this.endPicker.Name = "endPicker";
             this.endPicker.Size = new System.Drawing.Size(200, 29);
             this.endPicker.TabIndex = 6;
-            this.endPicker.Value = new System.DateTime(2023, 12, 10, 0, 0, 0, 0);
+            this.endPicker.Value = new System.DateTime(2023, 12, 17, 0, 0, 0, 0);
             // 
             // button1
             // 
@@ -126,6 +139,7 @@
             this.button1.TabIndex = 7;
             this.button1.Text = "Записать в БД";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -155,7 +169,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 562);
+            this.ClientSize = new System.Drawing.Size(1179, 421);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -166,6 +180,7 @@
             this.Controls.Add(this.startPicker);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormShedule";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Табель";
             this.Load += new System.EventHandler(this.FormShedule_Load);
             ((System.ComponentModel.ISupportInitialize)(this.main_dbDataSet)).EndInit();
