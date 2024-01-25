@@ -30,6 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.makeButton = new System.Windows.Forms.Button();
             this.previewButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
             this.confirmButton = new System.Windows.Forms.Button();
@@ -42,7 +43,6 @@
             this.orderNumberBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.makeButton = new System.Windows.Forms.Button();
             this.PrintDialog1 = new System.Windows.Forms.PrintDialog();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -76,6 +76,18 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(561, 50);
             this.panel2.TabIndex = 15;
+            // 
+            // makeButton
+            // 
+            this.makeButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.makeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.makeButton.Location = new System.Drawing.Point(151, 6);
+            this.makeButton.Name = "makeButton";
+            this.makeButton.Size = new System.Drawing.Size(114, 44);
+            this.makeButton.TabIndex = 3;
+            this.makeButton.Text = "Сформировать";
+            this.makeButton.UseVisualStyleBackColor = false;
+            this.makeButton.Click += new System.EventHandler(this.makeButton_Click);
             // 
             // previewButton
             // 
@@ -199,18 +211,6 @@
             this.label5.TabIndex = 2;
             this.label5.Text = "Создание приказа";
             // 
-            // makeButton
-            // 
-            this.makeButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.makeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.makeButton.Location = new System.Drawing.Point(151, 6);
-            this.makeButton.Name = "makeButton";
-            this.makeButton.Size = new System.Drawing.Size(114, 44);
-            this.makeButton.TabIndex = 3;
-            this.makeButton.Text = "Сформировать";
-            this.makeButton.UseVisualStyleBackColor = false;
-            this.makeButton.Click += new System.EventHandler(this.makeButton_Click);
-            // 
             // PrintDialog1
             // 
             this.PrintDialog1.UseEXDialog = true;
@@ -223,6 +223,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
             this.Name = "FormDocs";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Создать приказ";
             this.Load += new System.EventHandler(this.FormDocs_Load);
             this.panel1.ResumeLayout(false);

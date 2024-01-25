@@ -74,5 +74,31 @@ namespace PersonnelApp
             }
             return false;
         }
+
+        internal bool PrintDoc()
+        {
+            Word.Application app = null;
+            try
+            {
+                app = new Word.Application();
+                Object file = _fileinfo.FullName;
+
+                Object missing = Type.Missing;
+                app.Documents.Open(file);
+
+
+                return true;
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message, ex.Source); }
+
+            finally
+            {
+                if (app != null)
+                {
+                    app.Quit();
+                }
+            }
+            return false;
+        }
     }
 }
