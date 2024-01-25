@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1;
 using Word = Microsoft.Office.Interop.Word;
 
 namespace PersonnelApp
@@ -57,9 +58,10 @@ namespace PersonnelApp
                         Replace: replace);
                 }
 
-                Object newFileName = Path.Combine(_fileinfo.DirectoryName, DateTime.Now.ToString("dd-MM-yy") + _fileinfo.Name);
+                Object newFileName = Path.Combine(_fileinfo.DirectoryName + "\\docs", DateTime.Now.ToString("dd-MM-yy") + _fileinfo.Name);
                 app.ActiveDocument.SaveAs2(newFileName);
                 app.ActiveDocument.Close();
+                CurrentDocument.currentDoc = new WordHelper(newFileName.ToString());
 
                 return true;
             }
@@ -85,7 +87,10 @@ namespace PersonnelApp
 
                 Object missing = Type.Missing;
                 app.Documents.Open(file);
-
+                app.ActiveDocument.Save();
+                app.Dialogs[Word.WdWordDialog.wdDialogFilePrint].Show();
+                app.Documents.Close();
+                app.Application.Quit();
 
                 return true;
             }

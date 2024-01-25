@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1;
 
 
 namespace PersonnelApp
@@ -74,7 +75,48 @@ namespace PersonnelApp
 
         private void makeButton_Click(object sender, EventArgs e)
         {
-            var helper = new WordHelper("order.doc");
+
+            /*var docTypes = new Dictionary<string, string>
+            {
+                {"отпуск", @"приказ_отпуск.doc" },
+                {"прием", @"приказ_прием.doc" },
+                {"увольнение", @"приказ_увольнение.doc" },
+            };*/
+
+
+            switch (orderTypeBox.Text)
+            {
+                case "Отпуск":
+                    
+                    var form = new FormOtpusk();
+                    form.currentEmpl = emplBox.SelectedItem.ToString();
+                    form.currentNum = orderNumberBox.Text;
+                    form.currentDate = datePicker.Value.Date.ToString("dd MM yyyy");
+                    form.Show();
+                    break;
+
+                case "Приём":
+                    
+                    var form1 = new FormOrderIn();
+                    form1.currentEmpl = emplBox.SelectedItem.ToString();
+                    form1.currentNum = orderNumberBox.Text;
+                    form1.currentDate = datePicker.Value.Date.ToString("dd MM yyyy");
+                    form1.Show();
+
+                    break;
+
+                case "Увольнение":
+
+                    var form2 = new FormOrderOut();
+                    form2.currentEmpl = emplBox.SelectedItem.ToString();
+                    form2.currentNum = orderNumberBox.Text;
+                    form2.currentDate = datePicker.Value.Date.ToString("dd MM yyyy");
+                    form2.Show();
+                    break;
+            }
+
+
+            /*var helper = new WordHelper(docTypes[orderTypeBox.Text]);
             var items = new Dictionary<string, string>
             {
                 { "<NUM>", orderNumberBox.Text},
@@ -82,32 +124,19 @@ namespace PersonnelApp
                 {"<EMPL>", emplBox.SelectedItem.ToString()},
             };
             helper.Process(items);
+            MessageBox.Show("Документ сформирован", "Ответ от сервера", MessageBoxButtons.OK,MessageBoxIcon.Information);*/
         }
 
-        private System.Drawing.Printing.PrintDocument docToPrint =
-        new System.Drawing.Printing.PrintDocument();
         private void previewButton_Click(object sender, EventArgs e)
         {
 
-        // Allow the user to choose the page range he or she would
-        // like to print.
-            PrintDialog1.AllowSomePages = true;
-
-            // Show the help button.
-            PrintDialog1.ShowHelp = true;
-
-            // Set the Document property to the PrintDocument for 
-            // which the PrintPage Event has been handled. To display the
-            // dialog, either this property or the PrinterSettings property 
-            // must be set 
-            PrintDialog1.Document = docToPrint;
-
-            DialogResult result = PrintDialog1.ShowDialog();
-
-            // If the result is OK then print the document.
-            if (result == DialogResult.OK)
+            if (CurrentDocument.currentDoc != null)
             {
-                docToPrint.Print();
+                CurrentDocument.currentDoc.PrintDoc();
+            }
+            else
+            {
+                MessageBox.Show("Файл не загружен");
             }
         }
     }

@@ -33,7 +33,6 @@
             this.makeButton = new System.Windows.Forms.Button();
             this.previewButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
-            this.confirmButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.orderTypeBox = new System.Windows.Forms.ComboBox();
             this.emplBox = new System.Windows.Forms.ComboBox();
@@ -71,7 +70,6 @@
             this.panel2.Controls.Add(this.makeButton);
             this.panel2.Controls.Add(this.previewButton);
             this.panel2.Controls.Add(this.exitButton);
-            this.panel2.Controls.Add(this.confirmButton);
             this.panel2.Location = new System.Drawing.Point(-1, 194);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(561, 50);
@@ -81,7 +79,7 @@
             // 
             this.makeButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.makeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.makeButton.Location = new System.Drawing.Point(151, 6);
+            this.makeButton.Location = new System.Drawing.Point(164, 6);
             this.makeButton.Name = "makeButton";
             this.makeButton.Size = new System.Drawing.Size(114, 44);
             this.makeButton.TabIndex = 3;
@@ -95,9 +93,9 @@
             this.previewButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.previewButton.Location = new System.Drawing.Point(4, 6);
             this.previewButton.Name = "previewButton";
-            this.previewButton.Size = new System.Drawing.Size(141, 44);
+            this.previewButton.Size = new System.Drawing.Size(154, 44);
             this.previewButton.TabIndex = 2;
-            this.previewButton.Text = "Предварительный просмотр";
+            this.previewButton.Text = "Предварительный просмотр и печать";
             this.previewButton.UseVisualStyleBackColor = false;
             this.previewButton.Click += new System.EventHandler(this.previewButton_Click);
             // 
@@ -112,17 +110,6 @@
             this.exitButton.Text = "Отмена";
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // confirmButton
-            // 
-            this.confirmButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.confirmButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.confirmButton.Location = new System.Drawing.Point(384, 3);
-            this.confirmButton.Name = "confirmButton";
-            this.confirmButton.Size = new System.Drawing.Size(93, 44);
-            this.confirmButton.TabIndex = 0;
-            this.confirmButton.Text = "Подтвердить";
-            this.confirmButton.UseVisualStyleBackColor = false;
             // 
             // label4
             // 
@@ -140,8 +127,7 @@
             this.orderTypeBox.Items.AddRange(new object[] {
             "Приём",
             "Увольнение",
-            "Отпуск",
-            "Командировка"});
+            "Отпуск"});
             this.orderTypeBox.Location = new System.Drawing.Point(326, 18);
             this.orderTypeBox.Name = "orderTypeBox";
             this.orderTypeBox.Size = new System.Drawing.Size(150, 21);
@@ -248,7 +234,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button previewButton;
         private System.Windows.Forms.Button exitButton;
-        private System.Windows.Forms.Button confirmButton;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button makeButton;
         private System.Windows.Forms.PrintDialog PrintDialog1;

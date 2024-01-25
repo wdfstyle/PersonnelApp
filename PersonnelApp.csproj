@@ -50,7 +50,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
-      <HintPath>..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AuthDBConnection.cs" />
+    <Compile Include="CurrentDocument.cs" />
     <Compile Include="currentUser.cs" />
     <Compile Include="Department.cs" />
     <Compile Include="Emploee.cs" />
@@ -105,11 +106,11 @@
     <Compile Include="FormDocs.Designer.cs">
       <DependentUpon>FormDocs.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form6.cs">
+    <Compile Include="FormOrderIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form6.Designer.cs">
-      <DependentUpon>Form6.cs</DependentUpon>
+    <Compile Include="FormOrderIn.Designer.cs">
+      <DependentUpon>FormOrderIn.cs</DependentUpon>
     </Compile>
     <Compile Include="Form7.cs">
       <SubType>Form</SubType>
@@ -140,6 +141,18 @@
     </Compile>
     <Compile Include="FormNewUser.Designer.cs">
       <DependentUpon>FormNewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOrderOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOrderOut.Designer.cs">
+      <DependentUpon>FormOrderOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOtpusk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOtpusk.Designer.cs">
+      <DependentUpon>FormOtpusk.cs</DependentUpon>
     </Compile>
     <Compile Include="FormShedule.cs">
       <SubType>Form</SubType>
@@ -181,8 +194,8 @@
     <EmbeddedResource Include="FormDocs.resx">
       <DependentUpon>FormDocs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form6.resx">
-      <DependentUpon>Form6.cs</DependentUpon>
+    <EmbeddedResource Include="FormOrderIn.resx">
+      <DependentUpon>FormOrderIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form7.resx">
       <DependentUpon>Form7.cs</DependentUpon>
@@ -198,6 +211,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormNewUser.resx">
       <DependentUpon>FormNewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOrderOut.resx">
+      <DependentUpon>FormOrderOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOtpusk.resx">
+      <DependentUpon>FormOtpusk.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormShedule.resx">
       <DependentUpon>FormShedule.cs</DependentUpon>
@@ -226,9 +245,6 @@
     <None Include="main_dbDataSet.xss">
       <DependentUpon>main_dbDataSet.xsd</DependentUpon>
     </None>
-    <None Include="order.doc">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -238,6 +254,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="приказ_отпуск.doc" />
+    <None Include="приказ_прием.doc" />
+    <None Include="приказ_увольнение.doc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
